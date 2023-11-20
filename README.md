@@ -1,3 +1,8 @@
+Standard Next.js Readme template because I am lazy.
+
+This site uses Next.js paired with tailwindcss to make a somewhat useful website for the intelligence modding group.
+
+---
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
