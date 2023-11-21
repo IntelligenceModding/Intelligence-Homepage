@@ -1,0 +1,46 @@
+// * For config options, see the README at:
+// * https://github.com/microsoft/vscode-dev-containers/tree/v0.205.2/containers/debian
+{
+  "name": "React/NextJS & TypeScript",
+  "image": "node:21-alpine",
+  "features": {
+    "docker-from-docker": "latest",
+    "git": "latest",
+    "node": "21"
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "files.watcherExclude": {
+      "**/node_modules/**": true
+    },
+    // * For Linter and Formatter
+    "editor.codeActionsOnSave": [
+      "source.organizeImports",
+      "source.addMissingImports",
+      "source.removeUnusedImports",
+      "source.fixAll.eslint"
+    ],
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.tabSize": 2,
+    "eslint.packageManager": "yarn",
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "javascript.preferences.importModuleSpecifierEnding": "minimal",
+    "typescript.preferences.importModuleSpecifierEnding": "minimal",
+    "[markdown]": {
+      "files.trimTrailingWhitespace": false,
+      "editor.wordWrap": "on",
+      "editor.quickSuggestions": false
+    }
+  },
+  // * Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [3000],
+  // * Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "sudo chown -R vscode:vscode node_modules",
+  // * Comment out connect as root instead.
+  // * More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "vscode"
+}
