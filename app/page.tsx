@@ -71,7 +71,7 @@ const social = [
 
 export default function Home() {
   return (
-      <div className="bg-white h-screen flex flex-col justify-between">
+      <div className="bg-white flex flex-col justify-between">
         <main className="mx-auto w-full max-w-7xl px-6 pb-16 pt-10 sm:pb-24 lg:px-8">
           <Image
               className="mx-auto sm:h-32 sm:w-32"
