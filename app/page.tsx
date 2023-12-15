@@ -93,11 +93,10 @@ export default function Home() {
                     alt="Logo"
                 />
                 <div className="mx-auto mt-20 max-w-2xl text-center sm:mt-24">
-                    <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">This page does
-                        not exist</h1>
-                    <p className="mt-4 text-base leading-7 text-gray-600 sm:mt-6 sm:text-lg sm:leading-8">
-                        {/* eslint-disable-next-line react/no-unescaped-entities */}
-                        Sorry, I'm too lazy to make a proper website for intelligence.
+                    <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Here emerges something great</h1>
+            <p className="mt-4 text-base leading-7 text-gray-600 sm:mt-6 sm:text-lg sm:leading-8">
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
+
                     </p>
                 </div>
                 <div className="mx-auto mt-16 flow-root max-w-lg sm:mt-20">
