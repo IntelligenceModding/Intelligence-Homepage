@@ -2,7 +2,8 @@
 const nextConfig = {
     output: "standalone",
     images: {
-        domains: ['intelligence-modding.de'],
+        domains: ['tailwindui.com'],
+        dangerouslyAllowSVG: true,
     },
     webpack: (config, context) => {
         // Enable polling based on env variable being set
