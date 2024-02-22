@@ -4,7 +4,7 @@ import {useState, useEffect, useRef} from 'react'
 import {Dialog} from '@headlessui/react'
 import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
 import Image from "next/image";
-import {ColorSwitcher} from "@/app/ui/buttons/color-switcher";
+import {ColorSwitcher} from "./buttons/color-switcher";
 
 const navigation = [
     {name: 'Projects', href: '/projects'},
@@ -38,7 +38,7 @@ export function Navbar() {
         <header ref={navbarRef} className={`sticky top-0 bg-slate-800 ${isScrolled ? 'bg-opacity-75' : ''}`}>
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
-                    <a href="/" className="-m-1 p-1">
+                    <a href="/public" className="-m-1 p-1">
                         <span className="sr-only">Your Company</span>
                         <Image className="w-auto"
                                src="/BH_INH_Logo_2.png"
@@ -69,7 +69,7 @@ export function Navbar() {
                     <div className="px-3">
                         <ColorSwitcher/>
                     </div>
-                    <a href="#" className="text-sm font-semibold leading-6 text-white">
+                    <a href="/login" className="text-sm font-semibold leading-6 text-white">
                         Log in <span aria-hidden="true">&rarr;</span>
                     </a>
                 </div>
