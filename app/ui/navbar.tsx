@@ -4,6 +4,7 @@ import {useState, useEffect, useRef} from 'react'
 import {Dialog} from '@headlessui/react'
 import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
 import Image from "next/image";
+import {ColorSwitcher} from "@/app/ui/buttons/color-switcher";
 
 const navigation = [
     {name: 'Projects', href: '/projects'},
@@ -65,6 +66,9 @@ export function Navbar() {
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+                    <div className="px-3">
+                        <ColorSwitcher/>
+                    </div>
                     <a href="#" className="text-sm font-semibold leading-6 text-white">
                         Log in <span aria-hidden="true">&rarr;</span>
                     </a>

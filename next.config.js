@@ -2,7 +2,7 @@
 const nextConfig = {
     output: "standalone",
     images: {
-        domains: ['tailwindui.com'],
+        domains: ['tailwindui.com', "avatars.githubusercontent.com"],
         dangerouslyAllowSVG: true,
     },
     webpack: (config, context) => {

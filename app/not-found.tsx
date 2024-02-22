@@ -1,16 +1,11 @@
 import Image from 'next/image'
 import {ChevronRightIcon} from '@heroicons/react/20/solid'
 import {BookOpenIcon, ArrowUturnLeftIcon} from '@heroicons/react/24/solid'
-import logo from '/public/BH_INH_Logo_2.png'; // Tell webpack this JS file uses this image
-
+import logo from '/public/BH_INH_Logo_2.png';
+import React from "react";
+import {GoBackButton} from "@/app/ui/buttons/go-back";
 
 const links = [
-    {
-        name: 'Home Page',
-        href: `/`,
-        description: 'Go back to the place where you\'ve come from.',
-        icon: ArrowUturnLeftIcon,
-    },
     {
         name: 'Documentation',
         href: 'https://docs.intelligence-modding.de/',
@@ -38,6 +33,23 @@ export default function NotFound() {
                 <div className="mx-auto mt-16 flow-root max-w-lg sm:mt-20">
                     <h2 className="sr-only">Popular pages</h2>
                     <ul role="list" className="-mt-6 divide-y divide-gray-900/5 border-b border-gray-900/5">
+                        <li key="goBack" className="relative flex gap-x-6 py-6">
+                            <div
+                                className="flex h-10 w-10 flex-none items-center justify-center rounded-lg shadow-sm ring-1 ring-gray-900/10 dark:ring-blue-700">
+                                <ArrowUturnLeftIcon className="h-6 w-6 text-indigo-600" aria-hidden="true"/>
+                            </div>
+                            <div className="flex-auto">
+                                <h3 className="text-sm font-semibold leading-6 dark:text-white">
+                                    <GoBackButton/>
+                                </h3>
+                                <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-300">
+                                    Go back to the place where you&apos;ve come from.
+                                </p>
+                            </div>
+                            <div className="flex-none self-center">
+                                <ChevronRightIcon className="h-5 w-5 text-gray-100" aria-hidden="true"/>
+                            </div>
+                        </li>
                         {links.map((link, linkIdx) => (
                             <li key={linkIdx} className="relative flex gap-x-6 py-6">
                                 <div

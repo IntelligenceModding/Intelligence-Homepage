@@ -3,8 +3,8 @@ import { JSX, SVGProps } from "react"
 const navigation = {
     main: [
         {name: 'About', href: '/about'},
-        {name: 'Accessibility', href: '/Accessibility'},
-        {name: 'Partners', href: '/Partners'},
+        {name: 'Accessibility', href: '/accessibility'},
+        {name: 'Partners', href: '/partners'},
     ],
     social: [
         {
@@ -49,7 +49,7 @@ const navigation = {
 export function Footer() {
     return (
         <footer className="bg-white dark:bg-slate-800 border-t border-slate-600">
-            <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+            <div className="mx-auto max-w-7xl overflow-hidden px-6 py-24 sm:py-8 lg:px-8">
                 <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
                     {navigation.main.map((item) => (
                         <div key={item.name} className="pb-6">
