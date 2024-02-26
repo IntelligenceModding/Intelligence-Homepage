@@ -1,12 +1,13 @@
 import '@/app/ui/globals.css';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({children}: { children: React.ReactNode }) {
     return (
-        <body>
-            <div>
-                <p>eeded</p>
+        <html className="h-full bg-slate-800">
+        <body className="h-full">
+        <div>
             {children}
-            </div>
+        </div>
         </body>
+        </html>
     )
 }
