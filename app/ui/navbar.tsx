@@ -10,7 +10,7 @@ const navigation = [
     {name: 'Projects', href: '/projects'},
     {name: 'Team', href: '/team'},
     {name: 'Partners', href: '/partners'},
-    {name: 'Mom', href: '#'},
+    {name: 'Mom', href: '/test'},
 ]
 
 export function Navbar() {
@@ -35,12 +35,12 @@ export function Navbar() {
     }, []);
 
     return (
-        <header ref={navbarRef} className={`sticky top-0 bg-slate-800 ${isScrolled ? 'bg-opacity-75' : ''}`}>
+        <header ref={navbarRef} className={`sticky top-0 bg-slate-800 z-20 ${isScrolled ? 'bg-opacity-75' : ''}`}>
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
-                    <a href="/public" className="-m-1 p-1">
+                    <a href="/" className="-m-1 p-1">
                         <span className="sr-only">Your Company</span>
-                        <Image className="w-auto"
+                        <Image className="w-auto hover:shadow-lg hover:shadow-sky-700 bg-blend-multiply"
                                src="/BH_INH_Logo_2.png"
                                alt=""
                                width={64}
@@ -60,7 +60,7 @@ export function Navbar() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item) => (
-                        <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white">
+                        <a key={item.name} href={item.href} className="text-sm hover:text-sky-400 font-semibold leading-6 text-white">
                             {item.name}
                         </a>
                     ))}

@@ -35,7 +35,7 @@ export default function Page() {
                 <ul role="link"
                     className="mx-auto mt-20 grid max-w-2xl gap-6 grid-cols-2 lg:mx-0, lg:max-w-none lg:gap-8">
                     {partners.map((partner) => (
-                        <li key={partner.name} className="rounded-2xl bg-slate-600 px-8 py-10 drop-shadow-2xl">
+                        <li key={partner.name} className="rounded-2xl hover:outline outline-offset-2 outline-sky-600 bg-slate-600 px-8 py-10 shadow-2xl hover:shadow-sky-700">
                             <Image className="py-0.5 rounded-full mx-auto"
                                    src={partner.image}
                                    alt=""

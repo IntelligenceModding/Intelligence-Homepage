@@ -36,8 +36,8 @@ export default function Page() {
         <div className="dark:bg-slate-800 py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
                 <div className="mx-auto max-w-2xl">
-                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Meet our team</h2>
-                    <p className="mt-4 text-lg leading-8 text-gray-400">
+                    <h2 className="text-3xl font-bold tracking-tight text-gray-800 dark:text-white sm:text-4xl">Meet our team</h2>
+                    <p className="mt-4 text-lg leading-8 dark:text-gray-400 text-gray-700">
                         We’re a dynamic group of ugly humans.
                     </p>
                 </div>
@@ -55,7 +55,7 @@ export default function Page() {
                                 height={88}
                             ></Image>
                             ))}
-                            <div className="rounded-2xl bg-slate-600 px-8 py-10 drop-shadow-2xl">
+                            <div className="rounded-2xl hover:outline outline-offset-2 outline-sky-600 bg-slate-600 px-8 py-10 shadow-2xl hover:shadow-sky-700">
 
                                 <Image className="relative mx-auto h-48 w-48 rounded-full md:h-56 md:w-56"
                                        src={person.imageUrl}
