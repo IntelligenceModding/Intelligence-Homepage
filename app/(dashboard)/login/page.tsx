@@ -5,12 +5,15 @@ export default function Example() {
         <>
             <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-md">
-                    <Image className="w-auto mx-auto h-auto"
-                           src="/BH_INH_Logo_2.png"
-                           alt=""
-                           width={64}
-                           height={64}
-                    />
+                    <a href="/" className="-m-1 p-1">
+                        <span className="sr-only">Intelligence Modding</span>
+                        <Image className="w-auto mx-auto"
+                               src="/BH_INH_Logo_2.png"
+                               alt=""
+                               width={64}
+                               height={64}
+                        />
+                    </a>
                     <h2 className="mt-6 text-center text-2xl font-bold leading-9 tracking-tight text-gray-200">
                         Sign in
                     </h2>

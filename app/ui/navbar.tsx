@@ -39,7 +39,7 @@ export function Navbar() {
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <a href="/" className="-m-1 p-1">
-                        <span className="sr-only">Your Company</span>
+                        <span className="sr-only">Intelligence Modding</span>
                         <Image className="w-auto hover:shadow-lg hover:shadow-sky-700 bg-blend-multiply"
                                src="/BH_INH_Logo_2.png"
                                alt=""
