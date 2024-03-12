@@ -5,6 +5,7 @@ import {Dialog} from '@headlessui/react'
 import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
 import Image from "next/image";
 import {ColorSwitcher} from "./buttons/color-switcher";
+import Link from "next/link";
 
 const navigation = [
     {name: 'Projects', href: '/projects'},
@@ -38,7 +39,7 @@ export function Navbar() {
         <header ref={navbarRef} className={`sticky top-0 bg-slate-800 z-20 ${isScrolled ? 'bg-opacity-75' : ''}`}>
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
-                    <a href="/" className="-m-1 p-1">
+                    <Link href="/" className="-m-1 p-1">
                         <span className="sr-only">Intelligence Modding</span>
                         <Image className="w-auto hover:shadow-lg hover:shadow-sky-700 bg-blend-multiply"
                                src="/BH_INH_Logo_2.png"
@@ -46,7 +47,7 @@ export function Navbar() {
                                width={64}
                                height={64}
                         />
-                    </a>
+                    </Link>
                 </div>
                 <div className="flex lg:hidden">
                     <button
@@ -60,18 +61,18 @@ export function Navbar() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item) => (
-                        <a key={item.name} href={item.href} className="text-sm hover:text-sky-400 font-semibold leading-6 text-white">
+                        <Link key={item.name} href={item.href} className="text-sm hover:text-sky-400 font-semibold leading-6 text-white">
                             {item.name}
-                        </a>
+                        </Link>
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <div className="px-3">
                         <ColorSwitcher/>
                     </div>
-                    <a href="/login" className="text-sm font-semibold leading-6 text-white">
+                    <Link href="/login" className="text-sm font-semibold leading-6 text-white">
                         Log in <span aria-hidden="true">&rarr;</span>
-                    </a>
+                    </Link>
                 </div>
             </nav>
             {mobileMenuOpen && (
